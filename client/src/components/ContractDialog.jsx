@@ -144,7 +144,7 @@ const ContractDialog = ({ handleFormClose, contractToOpen }) => {
               <div className='  text-lg  flex items-center gap-4  my-4'>
                 <h2 className='text-lg font-bold  '>Call off Details:</h2>
                 <div className='flex  flex-col '>
-                  {[...Array(totalCallOffs)].map((x, i) => {
+                  {[...Array(totalCallOffs)]?.map((x, i) => {
                     return (
                       <React.Fragment key={`Calloff` + i}>
                         <h2 className='text-lg font-bold text-center '>
@@ -231,7 +231,7 @@ const ContractDialog = ({ handleFormClose, contractToOpen }) => {
               <div className='  text-lg  flex items-center   gap-4  my-4'>
                 <h2 className='text-lg font-bold  '>SES End Date:</h2>
                 <div className='flex flex-auto justify-center flex-col'>
-                  {[...Array(totalSES)].map((x, i) => {
+                  {[...Array(totalSES)]?.map((x, i) => {
                     return (
                       <React.Fragment key={'ses' + i}>
                         <label

@@ -211,7 +211,7 @@ const Table = () => {
         />
       )}
       <div className='bg-blue-200 flex justify-evenly mb-4 '>
-        {TABLE_HEAD.slice(1).map((heading, i) => {
+        {TABLE_HEAD.slice(1)?.map((heading, i) => {
           return (
             <div className='gap-1 flex' key={heading}>
               <input
@@ -235,7 +235,7 @@ const Table = () => {
                 <tr>
                   {TABLE_HEAD.filter((heading, i) => {
                     return visibleCols.includes(heading);
-                  }).map((heading) => {
+                  })?.map((heading) => {
                     return (
                       <th key={heading} scope='col' className='px-2 py-3'>
                         {heading}
@@ -245,7 +245,7 @@ const Table = () => {
                 </tr>
               </thead>
               <tbody>
-                {contractData.map((contract, i) => {
+                {contractData?.map((contract, i) => {
                   return (
                     <tr
                       key={i}
@@ -281,7 +281,7 @@ const Table = () => {
                       )}
                       {visibleCols.includes('COFF Start Date') && (
                         <td className='whitespace-nowrap px-2 py-3'>
-                          {contract.coffStart.map((x, i) => {
+                          {contract.coffStart?.map((x, i) => {
                             return (
                               <span key={i} className='bg-white font-semibold'>
                                 {formatDate(x)}
@@ -299,7 +299,7 @@ const Table = () => {
                       )}
                       {visibleCols.includes('COFF End Date') && (
                         <td className='whitespace-nowrap px-2 py-3   '>
-                          {contract.coffEnd.map((x, i) => {
+                          {contract.coffEnd?.map((x, i) => {
                             return (
                               <span
                                 key={i}
@@ -319,7 +319,7 @@ const Table = () => {
                       )}
                       {visibleCols.includes('SES End Date') && (
                         <td className='whitespace-nowrap px-2 py-3   '>
-                          {contract.sesEnd.map((x, i) => {
+                          {contract.sesEnd?.map((x, i) => {
                             return (
                               <span
                                 key={i}
@@ -465,7 +465,7 @@ const Table = () => {
                   />
                 </div>
                 <div className='flex-1 flex flex-col items-center justify-center    '>
-                  {[...Array(totalCallOffsToAdd)].map((x, i) => {
+                  {[...Array(totalCallOffsToAdd)]?.map((x, i) => {
                     return (
                       <div className='flex justify-evenly' key={i}>
                         <div className='w-min focus-within:w-44  whitespace-nowrap px-2 py-3'>
@@ -549,7 +549,7 @@ const Table = () => {
                   </div>
                 </div>
                 <div className='flex-1 flex flex-col items-center justify-center    '>
-                  {[...Array(totalSESToAdd)].map((x, i) => {
+                  {[...Array(totalSESToAdd)]?.map((x, i) => {
                     return (
                       <div className='flex justify-evenly' key={i}>
                         <div className=' focus-within:w-44  whitespace-nowrap px-2 py-3'>
