@@ -18,9 +18,7 @@ app.use(
   })
 );
 
-mongoose.connect(
-  'mongodb+srv://prime-pakistan:prime123@cluster0.qyyqgdl.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp'
-);
+mongoose.connect(process.env.MONGODB_URI);
 app.get('/api/get-user-data', async (req, res) => {
   const { token } = req.cookies;
 
