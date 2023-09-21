@@ -116,7 +116,7 @@ const Table = () => {
       );
     }
     if (Number.isInteger(diff)) {
-      if (diff < 10 && type == 'contract') {
+      if (diff > 90 && type == 'contract') {
         return 'bg-red-700 text-white font-bold';
       } else if (diff < 10 && type == 'calloff') {
         return 'bg-yellow-700 text-white font-bold';
