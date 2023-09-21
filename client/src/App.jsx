@@ -11,7 +11,7 @@ import LoginAuthRoute from './middleware/LoginAuth';
 import CheckLoggedIn from './middleware/checkLoggedIn';
 import axios from 'axios';
 import { UserProvider } from './context/UserContext';
-axios.defaults.baseURL = import.meta.env.VITE_SERVER_BASE_URL;
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
 axios.defaults.withCredentials = true;
 function App() {
   return (
