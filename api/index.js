@@ -18,7 +18,7 @@ app.use(
   })
 );
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(process.env.MONGODB_URI);
 app.get('/api/get-user-data', async (req, res) => {
   const { token } = req.cookies;
 
