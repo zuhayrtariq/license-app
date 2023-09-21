@@ -39,7 +39,7 @@ const ContractDialog = ({ handleFormClose, contractToOpen }) => {
 
   const handleDeleteRecord = async () => {
     try {
-      const { data } = await axios.post('http://127.0.0.1:4000/delete-record', {
+      const { data } = await axios.post('/delete-record', {
         pnNo: t_pnNo,
       });
       alert('Record Deleted Successfully!');
@@ -71,7 +71,7 @@ const ContractDialog = ({ handleFormClose, contractToOpen }) => {
     e.preventDefault();
     console.log(t_coffStart);
     try {
-      const { data } = await axios.post('http://127.0.0.1:4000/update-record', {
+      const { data } = await axios.post('/update-record', {
         pnNo: t_pnNo,
         description: t_description,
         vendorName: t_vendorName,

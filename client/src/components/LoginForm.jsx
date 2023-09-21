@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Navigate, useNavigate } from 'react-router-dom';
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = 'http://localhost:4000';
+axios.defaults.baseURL = 'https://prime-pakistan.vercel.app';
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [showPassword, setShowPassword] = useState(false);

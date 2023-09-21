@@ -33,7 +33,7 @@ const Table = () => {
   const getData = async () => {
     try {
       if (tableId) {
-        const { data } = await axios.get('http://127.0.0.1:4000/get-data', {
+        const { data } = await axios.get('/get-data', {
           params: {
             tableId,
           },
@@ -41,7 +41,7 @@ const Table = () => {
         setLoadedData(true);
         return data;
       } else {
-        const { data } = await axios.get('http://127.0.0.1:4000/all-contracts');
+        const { data } = await axios.get('/all-contracts');
         setLoadedData(true);
         return data;
       }
@@ -71,7 +71,7 @@ const Table = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://127.0.0.1:4000/add-record', {
+      const { data } = await axios.post('/add-record', {
         section,
         pnNo,
         description,
