@@ -116,7 +116,7 @@ const Table = () => {
       );
     }
     if (Number.isInteger(diff)) {
-      if (diff > 90 && type == 'contract') {
+      if (diff < 90 && type == 'contract') {
         return 'bg-red-700 text-white font-bold';
       } else if (diff < 10 && type == 'calloff') {
         return 'bg-yellow-700 text-white font-bold';
@@ -125,7 +125,7 @@ const Table = () => {
       }
     }
 
-    return 'bg-white font-semibold';
+    return ' font-semibold';
   };
 
   const formatDate = (date) => {
@@ -283,7 +283,7 @@ const Table = () => {
                         <td className='whitespace-nowrap px-2 py-3'>
                           {contract.coffStart?.map((x, i) => {
                             return (
-                              <span key={i} className='bg-white font-semibold'>
+                              <span key={i} className=' font-semibold'>
                                 {formatDate(x)}
                                 <span className='mb-1 block'></span>
                               </span>
